@@ -1,0 +1,132 @@
+:root {
+  --primary-gradient: linear-gradient(
+    135deg,
+    #007bff,
+    #6a00ff
+  ); /* Purple-blue gradient */
+  --card-bg-color: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --border-radius-lg: 1rem;
+  --border-radius-sm: 0.5rem;
+  --text-dark: #333;
+  --text-light-gray: #666;
+  --input-border-color: #ccc;
+  --button-gradient: linear-gradient(90deg, #6a00ff, #007bff);
+  --button-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page container with gradient background */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-gradient);
+}
+
+/* The login card centered on the page */
+.login-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+/* Header section with icon and titles */
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.car-icon {
+  width: 50px;
+  height: 50px;
+  color: #007bff; /* Matches the gradient */
+  margin-bottom: 0.5rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.card-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-light-gray);
+}
+
+/* Form group styling */
+.input-group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-light-gray);
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #6a00ff;
+  box-shadow: 0 0 0 3px rgba(106, 0, 255, 0.1);
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--button-gradient);
+  box-shadow: var(--button-shadow);
+  transition: all 0.2s ease-in-out;
+}
+
+.login-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff3860;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
