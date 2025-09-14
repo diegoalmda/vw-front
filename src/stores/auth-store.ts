@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { encryptedStorage } from "../utils/encrypted-storage"; // Importa o novo utilitário
+import { encryptedStorage } from "../utils/encrypted-storage";
 import { AUTH_STORE_KY } from "../constants/store-keys";
 
 interface AuthState {
