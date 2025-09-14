@@ -40,3 +40,10 @@ export interface VehicleFilterParams {
   order?: VehicleSortOrder;
   search?: string;
 }
+
+export interface VehicleCreatePayload {
+  model: string;
+  color: string;
+  year: number;
+  image: File;
+}

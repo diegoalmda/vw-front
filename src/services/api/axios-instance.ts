@@ -52,7 +52,7 @@ apiInstance.interceptors.response.use(
 
       if (!refreshToken) {
         authStore.clearAuth();
-        // window.location.href = "/";
+        window.location.href = "/";
         return Promise.reject(error);
       }
 
@@ -77,7 +77,7 @@ apiInstance.interceptors.response.use(
         authStore.clearAuth();
         isRefreshing = false;
         processQueue(err as AxiosApiError);
-        // window.location.href = "/";
+        window.location.href = "/";
         return Promise.reject(err);
       }
     }

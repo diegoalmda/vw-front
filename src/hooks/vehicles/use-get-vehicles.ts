@@ -5,6 +5,7 @@ import type {
 } from "../../interfaces/vehicles.interface";
 import type { AxiosApiError } from "../../types/error.types";
 import getVehicles from "../../services/vehicles/get-vehicles.service";
+import { GET_VEHICLES_QUERY_KEY } from "../../constants/query-keys";
 
 export interface UseGetVehiclesOptions {
   onSuccess?: (data: PaginatedVehicles) => void;
@@ -26,7 +27,7 @@ export const useGetVehicles = (
     PaginatedVehicles,
     AxiosApiError
   >({
-    queryKey: ["vehicles", params],
+    queryKey: [GET_VEHICLES_QUERY_KEY, params],
     queryFn: async () => {
       const response = await getVehicles(params);
       return response.data;
