@@ -1,9 +1,5 @@
 :root {
-  --primary-gradient: linear-gradient(
-    135deg,
-    #007bff,
-    #6a00ff
-  ); /* Purple-blue gradient */
+  --primary-gradient: linear-gradient(135deg, #007bff, #6a00ff);
   --card-bg-color: #ffffff;
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   --border-radius-lg: 1rem;
@@ -23,7 +19,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Page container with gradient background */
 .login-page {
   min-height: 100vh;
   display: flex;
@@ -32,7 +27,6 @@ body {
   background: var(--primary-gradient);
 }
 
-/* The login card centered on the page */
 .login-card {
   background-color: var(--card-bg-color);
   border-radius: var(--border-radius-lg);
@@ -44,7 +38,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Header section with icon and titles */
 .card-header {
   margin-bottom: 2rem;
 }
@@ -52,7 +45,7 @@ body {
 .car-icon {
   width: 50px;
   height: 50px;
-  color: #007bff; /* Matches the gradient */
+  color: #007bff;
   margin-bottom: 0.5rem;
 }
 
@@ -68,7 +61,6 @@ body {
   color: var(--text-light-gray);
 }
 
-/* Form group styling */
 .input-group {
   text-align: left;
   margin-bottom: 1.5rem;
@@ -97,7 +89,6 @@ body {
   box-shadow: 0 0 0 3px rgba(106, 0, 255, 0.1);
 }
 
-/* Button styling */
 .login-button {
   width: 100%;
   padding: 0.85rem;
@@ -123,7 +114,6 @@ body {
   box-shadow: none;
 }
 
-/* Error message styling */
 .error-message {
   color: #ff3860;
   font-size: 0.9rem;
