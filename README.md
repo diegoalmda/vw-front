@@ -40,3 +40,8 @@ Para configurar e rodar a aplicação em seu ambiente local, siga os passos abai
     ```
 
 A aplicação estará disponível em `http://localhost:5173` (ou em outra porta, caso a padrão esteja ocupada).
+
+### Logar no sistema como administrador
+
+`user: admin`
+`senha: admin123`
