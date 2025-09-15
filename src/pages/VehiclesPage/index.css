@@ -1,0 +1,185 @@
+.app-container {
+  display: flex;
+  font-family: sans-serif;
+  min-height: 100dvh;
+  background-color: #f0f2f5;
+  color: #333;
+  transition: padding-left 0.3s ease;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-info,
+.user-name {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.user-name {
+  color: #007bff;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #f0f0f0;
+}
+
+.logout-icon {
+  margin-left: 8px;
+}
+
+.dashboard-content {
+  padding: 40px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.search-and-new-vehicle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.search-form input,
+.search-form select {
+  flex: 1;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.new-vehicle-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.new-vehicle-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 992px) {
+  .app-container {
+    flex-direction: row;
+    padding-left: 60px;
+  }
+
+  .sidebar {
+    width: 60px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+  }
+
+  .sidebar.expanded {
+    width: 250px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .main-header {
+    justify-content: flex-end;
+  }
+
+  .toggle-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1001;
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+  .vehicle-table {
+    min-width: 600px;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .search-and-new-vehicle {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .new-vehicle-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 15px;
+  }
+}

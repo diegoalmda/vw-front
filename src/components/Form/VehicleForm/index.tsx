@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./index.css";
 import { useGetVehiclesModels } from "../../../hooks/vehicles/use-get-vehicles-models";
 import { useGetVehiclesColors } from "../../../hooks/vehicles/use-get-vehicles-colors";
@@ -54,7 +54,7 @@ const VehicleForm = ({ initialData, onClose }) => {
     });
   }, [initialData, reset]);
 
-  const { mutate: createVehicle, isPending } = useCreateVehicle({
+  const { mutate: createVehicle } = useCreateVehicle({
     onError: (error) => {
       toast.error(`${error.response?.data.message}`);
     },

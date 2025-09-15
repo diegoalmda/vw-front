@@ -1,69 +1,42 @@
-# React + TypeScript + Vite
+# Projeto de Gerenciamento de Veículos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um frontend construído com Vite e React para gerenciar veículos e usuários. Ele se conecta a um backend desenvolvido em Node-RED.
 
-Currently, two official plugins are available:
+A aplicação permite que usuários autenticados visualizem, criem, editem e excluam veículos, além de ter um painel de administração onde usuários **root** podem gerenciar outros usuários.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Vite**: Ambiente de desenvolvimento e bundler para um build rápido e otimizado.
+- **React com TypeScript**: Biblioteca para a construção da interface do usuário com tipagem estática.
+- **CSS**: Estilização da aplicação.
+- **React Hook Form & Zod**: Gerenciamento e validação de formulários de forma eficiente.
+- **Zustand**: Criação de um store centralizado para o gerenciamento de estado global.
+- **React Router DOM**: Gerenciamento de roteamento e navegação entre páginas.
+- **JWT (JSON Web Token)**: Utilizado para a autenticação do usuário.
+- **Axios**: Cliente HTTP para fazer requisições à API do backend.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Como Rodar o Projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Para configurar e rodar a aplicação em seu ambiente local, siga os passos abaixo:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Instalar as dependências:**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ```bash
+    npm install
+    ```
+
+2.  **Configurar as variáveis de ambiente:**
+    Copie o conteúdo do arquivo `.env.example` para um novo arquivo chamado `.env.local` na raiz do projeto.
+
+3.  **Rodar a aplicação:**
+    ```bash
+    npm run dev
+    ```
+
+A aplicação estará disponível em `http://localhost:5173` (ou em outra porta, caso a padrão esteja ocupada).

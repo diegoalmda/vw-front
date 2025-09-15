@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
       toast.error(`${error.response?.data.message}`);
     },
     onSuccess: () => {
-      navigate("/dashboard");
+      navigate("/");
     },
   });
 
